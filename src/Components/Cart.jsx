@@ -40,21 +40,23 @@ const Cart = ({ cartItems, removeFromCart, clearCart }) => {
       productImage: cartItems.map(item => item?.image || 'https://via.placeholder.com/100').join(', ')
     };
 
+    console.log("Sending to EmailJS:", emailData); // for debugging
+
     emailjs.send(
-      'service_hn1kfys', // ✅ NEW SERVICE ID
-      'template_fwml6n8', // ✅ NEW TEMPLATE ID
+      'service_fmsau4r',        // ✅ Correct service ID
+      'template_4r2aphm',       // ✅ Correct template ID
       emailData,
-      '8eTEvhWrHD7mzbZpk' // ✅ PUBLIC KEY
+      '8eTEvhWrHD7mzbZpk'       // ✅ Public key
     )
       .then(() => {
-        setMessage('Email sent successfully');
+        setMessage('✅ Email sent successfully!');
         setIsModalOpen(false);
         setIsSuccessModalOpen(true);
         clearCart();
       })
       .catch((error) => {
-        console.error("EmailJS Error:", error);
-        setMessage('Error sending email. Please try again.');
+        console.error("❌ EmailJS Error:", error);
+        setMessage('❌ Error sending email. Please try again.');
       });
   };
 
