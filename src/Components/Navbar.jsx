@@ -11,13 +11,13 @@ const NavBar = ({ cartCount }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ✅ Check login status
+  // ✅ Check login status when route changes
   useEffect(() => {
     const storedUsername = localStorage.getItem('username');
     setUsername(storedUsername || '');
   }, [location.pathname]);
 
-  // ✅ Outside click
+  // ✅ Close sidebar if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -35,6 +35,16 @@ const NavBar = ({ cartCount }) => {
 
   const handleNavigate = (path) => {
     navigate(path);
+    setIsOpen(false);
+  };
+
+  const handleProtectedNavigate = (path) => {
+    const isLoggedIn = !!localStorage.getItem('username');
+    if (isLoggedIn) {
+      navigate(path);
+    } else {
+      navigate('/login');
+    }
     setIsOpen(false);
   };
 
@@ -63,9 +73,9 @@ const NavBar = ({ cartCount }) => {
           <li onClick={() => handleNavigate('/about')}>About</li>
           <li onClick={() => handleNavigate('/contact')}>Contact</li>
           <li onClick={() => handleNavigate('/categories/all')}>All</li>
-          <li onClick={() => handleNavigate('/wishlist')}><FaHeart /> Wishlist</li>
-          <li onClick={() => handleNavigate('/myorders')}><FaList /> My Orders</li>
-          <li onClick={() => handleNavigate('/cart')}><FaShoppingCart /> Cart ({cartCount})</li>
+          <li onClick={() => handleProtectedNavigate('/wishlist')}><FaHeart /> Wishlist</li>
+          <li onClick={() => handleProtectedNavigate('/myorders')}><FaList /> My Orders</li>
+          <li onClick={() => handleProtectedNavigate('/cart')}><FaShoppingCart /> Cart ({cartCount})</li>
 
           {isLoggedIn ? (
             <>
@@ -80,6 +90,7 @@ const NavBar = ({ cartCount }) => {
           )}
         </ul>
       </div>
+
       {isOpen && <div className="backdrop" />}
     </>
   );
