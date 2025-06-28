@@ -75,7 +75,8 @@ const App = () => {
           width: '100%',
           zIndex: '1000'
         }}>
-          🎉 BUY 4 GET 2 FREE || BUY 6 GET 3 FREE . 🎉
+          🎉 Flat Rs. 700–1200 OFF on Every T-Shirt | Limited Stock Only!
+
         </div>
 
         <div className="main-content" style={{ paddingTop: '50px' }}>
