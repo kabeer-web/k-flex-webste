@@ -1,0 +1,127 @@
+.all-products {
+  background: linear-gradient(to right, #fefcea, #f1da36);
+  padding: 60px 15px;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.hero-section {
+  margin-bottom: 40px;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000;
+  text-shadow: 2px 2px 5px #feb500;
+  letter-spacing: 1px;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Product Card */
+.ultra-product-card {
+  position: relative;
+  display: block;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+}
+
+.ultra-product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(254, 181, 0, 0.25);
+}
+
+/* Image */
+.ultra-image-wrapper {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 15px;
+}
+
+.ultra-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.ultra-product-card:hover .ultra-image {
+  transform: scale(1.08);
+}
+
+/* Info */
+.ultra-info {
+  animation: fadeUp 0.5s ease-in-out;
+}
+
+.ultra-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ultra-price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.ultra-price .regular {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.ultra-price .sale {
+  font-size: 1.2rem;
+  color: #feb500;
+  font-weight: 700;
+}
+
+.ultra-save {
+  font-size: 0.9rem;
+  color: green;
+  font-weight: 500;
+}
+
+/* Discount Badge */
+.ultra-discount-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #feb500;
+  color: #000;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(254, 181, 0, 0.3);
+  transform: rotate(4deg);
+  z-index: 5;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

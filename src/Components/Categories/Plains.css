@@ -1,0 +1,70 @@
+.plains-products {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+  }
+  
+  .hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text {
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  .card-image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-regular-price {
+    margin-bottom: 0.5rem;
+    color: #777;
+    text-decoration: line-through;
+  }
+  
+  .card-sale-price {
+    margin-bottom: 0.5rem;
+    color: red; /* Sale price color */
+  }
+  
