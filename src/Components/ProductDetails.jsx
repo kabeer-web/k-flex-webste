@@ -54,10 +54,11 @@ const ProductDetails = ({ products, addToCart, addToWishlist, wishlistItems = []
       <h1 className="product-title">{product.name || 'Product Name Not Available'}</h1>
       <img className="product-image" src={product.image || '/default-image.png'} alt={product.name} />
       <p className="product-description">{product.description || 'No description available.'}</p>
+
       <p className="product-price">
-        Price: ₹{product.price} <br />
-        Shipping Fee: ₹{shippingFee} <br />
-        <strong>Total: ₹{product.price + shippingFee}</strong>
+        Price: ₨{product.price.toLocaleString()} <br />
+        Shipping Fee: ₨{shippingFee} <br />
+        <strong>Total: ₨{(product.price + shippingFee).toLocaleString()}</strong>
       </p>
 
       {product.showSizeOptions && (
