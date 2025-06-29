@@ -10,6 +10,7 @@ import image10 from './images/shirt 10.png';
 import image11 from './images/shirt 11.png';
 import image12 from './images/shirt 12.png';
 import image13 from './images/shirt 4.png';
+import image14 from './images/shirt 13.png';
 
 export const products = [
   {
@@ -143,5 +144,16 @@ export const products = [
     fit: 'Slim',
     description: 'Black and white T-shirt with a minimalist design, ideal for those who appreciate simplicity. Crafted from soft, breathable fabric, it ensures comfort while making a subtle fashion statement.',
     showSizeOptions: true,
+  },
+  {
+    id: 14,
+    name: 'Girl Pokie Oversized T-Shirt',
+    price: 1800,
+    image: image14,
+    regularPrice: 2200,
+    salePrice: 1800,
+    fit: 'Regular',
+    showSizeOptions: true,
+    description: 'Girl Pokie oversized T-shirt featuring a trendy and bold design, perfect for street-style fashion lovers. Crafted from premium soft cotton for all-day comfort and confidence.',
   },
 ];
